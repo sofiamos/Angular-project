@@ -1,0 +1,84 @@
+
+
+  
+   <div class="input-group mb-3 input-group-sm">
+        <span class="input-group-text"><i class="fa-sharp fa-solid fa-magnifying-glass"></i></span>
+        <input type="text"  class="form-control"placeholder="First Name" [(ngModel)]="FirstName" >
+        <span class="input-group-text"><i class="fa-sharp fa-solid fa-magnifying-glass"></i></span>
+        <input type="text"  class="form-control"placeholder="Last Name" [(ngModel)]="LastName" >
+        <span class="input-group-text"><i class="fa-sharp fa-solid fa-magnifying-glass"></i></span>
+        <input type="tel"  class="form-control"placeholder="Phone" [(ngModel)]="Phone" >
+
+        <button type="button" class="btn btn-outline-dark" (click)="addCard()">
+            <i class="fa-solid fa-plus"></i>Add Customer
+        </button>
+        
+      </div>
+
+
+
+
+
+      <table>
+<!----search by filter-->
+<ng-container *ngIf="customers
+| filter: 'FirstName':FirstName| filter: 'LastName':LastName | filter: 'Phone':Phone as customers">
+   
+
+
+
+    <table class="table table-bordered table-striped ">
+        
+        <thead>
+            <tr>
+                <th scope="col">No.</th>
+                <th scope="col">First Name</th>
+                <th scope="col">Last Name</th>
+                <th scope="col">Email</th>
+                <th scope="col">Phone</th>
+                <th scope="col">Details</th>
+                <th scope="col">Edit</th>
+                <th scope="col">Delete</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let customer of customers; index as i">
+                <td >{{i+1}}</td>
+                <td>{{customer.FirstName}} </td>
+                <td>{{customer.LastName}}</td>
+                <td>{{customer.Phone}}</td>
+                <td>{{customer.Email}}</td>
+                <td><a
+                    (click)="CustomerCard( customer)">
+                    <i class="fa-solid fa-address-card"></i>
+                </a>
+            </td>
+                <td><a
+                    (click)="updateCustomer( customer)">
+                    <i class="fa-solid fa-pen text-success">
+                    </i>
+                </a>
+            </td>
+                <td>
+                    <a
+                    (click)="deleteCustomer(customer)" >
+                    <i class="fa-solid fa-trash text-danger">
+                    </i>
+                </a>
+            </td>
+        
+    
+            </tr>
+        </tbody>
+
+
+
+  
+
+
+
+</table>
+
+
+

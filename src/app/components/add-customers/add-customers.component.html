@@ -1,0 +1,82 @@
+
+<div class="back">
+    <div class="addForm">
+<form #addCustomer="ngForm" (ngSubmit)="addNewCustomer()">
+    <h3><i class="fa-sharp fa-solid fa-user-plus"></i>
+       Add New Customer 
+    </h3>
+
+ <div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label">First Name</label>
+    <input 
+    type="text"
+     class="form-control"
+      id="exampleFormControlInput1" 
+      name="FirstName"
+      [(ngModel)]="customer.FirstName"
+      #FirstName="ngModel"
+      required
+      />
+      <small
+      class="text-danger"
+      *ngIf="FirstName.invalid && (FirstName.touched || FirstName.dirty)"
+      >please Insert Your First Name </small
+    >
+</div>
+
+<div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label">Last Name</label>
+    <input
+     type="text"
+      class="form-control" 
+      id="exampleFormControlInput1"
+       name=";astName"
+       [(ngModel)]="customer.LastName"
+       #LastName="ngModel"
+       required
+       />
+       <small
+       class="text-danger"
+       *ngIf="LastName.invalid && (LastName.touched || LastName.dirty)"
+       >please Insert Your Last Name </small
+     >
+ </div>
+
+<div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label">Phone</label>
+    <input 
+    type="phone" 
+    class="form-control"
+     id="exampleFormControlInput1" 
+     name="Phone"
+     [(ngModel)]="customer.Phone"
+     #Phone="ngModel"
+     required
+     />
+     <small
+     class="text-danger"
+     *ngIf="Phone.invalid && (Phone.touched || Phone.dirty)"
+     > Insert Your Phone Number</small
+   >
+</div>
+
+<div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label">Email</label>
+    <input 
+    type="text" 
+    class="form-control" 
+    id="exampleFormControlInput1" 
+    name="Email"
+    [(ngModel)]="customer.Email"
+    #Email="ngModel"
+    required
+    />   <small
+    class="text-danger"
+    *ngIf="Email.invalid && (Email.touched || Email.dirty)"
+    >please Insert Your Email Address </small
+  >
+</div>
+<button class="btn btn-outline-success" type="submit"> Add</button>
+</form>
+</div>
+</div>

@@ -1,0 +1,21 @@
+
+.addForm{
+    background-color:hsla(43, 19%, 85%,0.8);
+        backdrop-filter: saturate(200%) blur(25px);
+        
+      }
+
+ .back {
+
+   background: url(https://images.pexels.com/photos/1103970/pexels-photo-1103970.jpeg);
+
+  margin-top: 30px;
+}
+
+h3{
+   color: white;
+   text-align: center;
+   -webkit-text-stroke: 0.7px black; 
+
+   
+}

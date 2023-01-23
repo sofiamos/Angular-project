@@ -1,0 +1,37 @@
+<div class="container">
+    <form #updateCustomer="ngForm" (ngSubmit)="updateTheCustomer()">
+        <h3>
+            <i class="fa-solid fa-pen-to-square"></i>
+            Update Customer
+        </h3>
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">No.</label>
+            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Enter No." name="id"
+                [(ngModel)]="customer.id" #id="ngModel" required />
+        </div>
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">First Name</label>
+            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Enter First Name"
+                name="FirstName" [(ngModel)]="customer.FirstName" #FirstName="ngModel" required />
+        </div>
+
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Last Name</label>
+            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Enter Lats Name"
+                name=";astName" [(ngModel)]="customer.LastName" #LastName="ngModel" required />
+        </div>
+
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Phone</label>
+            <input type="phone" class="form-control" id="exampleFormControlInput1" placeholder="Enter Phone"
+                name="Phone" [(ngModel)]="customer.Phone" #Phone="ngModel" required />
+        </div>
+
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Email</label>
+            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Enter Email Adress"
+                name="Email" [(ngModel)]="customer.Email" #Email="ngModel" required />
+        </div>
+        <button class="btn btn-success" type="submit"> Update Customer</button>
+    </form>
+</div>

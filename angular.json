@@ -25,6 +25,7 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -35,7 +36,7 @@
                 {
                   "type": "initial",
                   "maximumWarning": "500kb",
-                  "maximumError": "1mb"
+                  "maximumError": "5mb"
                 },
                 {
                   "type": "anyComponentStyle",
@@ -91,8 +92,21 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "Angular-project:build:production",
+            "firebaseProject": "angular-project-sofia",
+            "firebaseHostingSite": "angular-project-sofia"
+          }
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "afd01aa6-2a53-4821-b42a-46d7096a412b"
   }
 }

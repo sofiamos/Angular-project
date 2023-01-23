@@ -1,0 +1,54 @@
+
+ 
+<div class="container col-3 mt-3">
+    <form #registerForm="ngForm" (ngSubmit) ="register()">
+        <h1 class="display-3 text-center">Register</h1>
+        <div class="form-floating mb-3">
+            <input 
+            type="email"
+            name="email"
+            class="form-control"
+            id="floatingInput"
+            placeholder="name@example.com"
+            [(ngModel)]="user.email"
+            required
+            minlength="8"
+            #email="ngModel"
+        />
+
+     <small 
+        class="text-danger" 
+        *ngIf="email.invalid &&
+        (email.touched || email.dirty)">Wrong email format
+    </small>
+
+            <label for="floatingInput">Email address</label>
+        </div>
+        <div class="form-floating">
+            <input 
+            type="password"
+            name="password"
+            class="form-control"
+            id="floatingPassword"
+            placeholder="Password"
+            [(ngModel)]="user.password"
+            required
+            minlength="8"
+            #password="ngModel"
+            />
+
+            <small
+             class="text-danger" 
+             *ngIf="password.invalid &&(password.touched || password.dirty)">password length should be at least 8 charters
+            </small>
+            
+            <label for="floatingPassword">Password</label>
+        </div>
+        <button type="submit" class="btn btn-success w-100 mt-4">Register
+        </button>
+      
+    </form>
+    <div  class="mt-3 text-center">
+        <a routerLink="/login" > Already have user? login</a>
+    </div>
+</div>

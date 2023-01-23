@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "angular-project-sofia": {
+      "hosting": {
+        "Angular-project": [
+          "angular-project-sofia"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "angular-project-sofia"
+  }
+}

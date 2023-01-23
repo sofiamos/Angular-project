@@ -1,0 +1,34 @@
+<div class="container">
+    <form #updateCustomer="ngForm" (ngSubmit)="showCustomerCard()">
+
+        <h3>
+            <i class="fa-solid fa-circle-info"></i>Customer Detailes
+        </h3>
+        <div class="mb-3 disabled">
+
+        </div>
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">First Name</label>
+            <input id="disabledInput" disabled type="text" class="form-control" id="exampleFormControlInput1"
+                placeholder="Enter First Name" name="FirstName" [(ngModel)]="customer.FirstName" #FirstName="ngModel" />
+        </div>
+
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Last Name</label>
+            <input id="disabledInput" disabled type="text" class="form-control" id="exampleFormControlInput1"
+                placeholder="Enter Lats Name" name="LastName" [(ngModel)]="customer.LastName" #LastName="ngModel" />
+        </div>
+
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Phone</label>
+            <input id="disabledInput" disabled type="phone" class="form-control" id="exampleFormControlInput1"
+                placeholder="Enter Phone" name="Phone" [(ngModel)]="customer.Phone" #Phone="ngModel" />
+        </div>
+
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Email</label>
+            <input id="disabledInput" disabled type="text" class="form-control" id="exampleFormControlInput1"
+                placeholder="Enter Email Adress" name="Email" [(ngModel)]="customer.Email" #Email="ngModel" />
+        </div>
+    </form>
+</div>
